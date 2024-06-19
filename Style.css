@@ -71,7 +71,7 @@ ul{
   list-style: none;
 }
 
-ul.list > li.item{
+.list__item{
   cursor: pointer;
 }
 
@@ -83,6 +83,39 @@ li.item:hover a{
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 var(--padding);
+}
+
+.search{
+  display: flex;
+  justify-content: end;
+}
+
+.search__form{
+  border: solid 1px var(--starship);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--margin);
+  padding: var(--padding);
+  /* Grid */
+  display: inline-grid;
+  justify-content: end;
+  grid-template-columns: auto 40px;
+  grid-template-rows: auto;
+  gap: 4px;
+}
+
+.input{
+  width: 100%;
+  padding: var(--padding);
+  outline: none;
+  border: solid 1px var(--starship);
+  font-size: 1rem;
+  color: var(--starship);
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
 }
 
 .card{
@@ -127,7 +160,14 @@ li.item:hover a{
   transition: var(--transition);
 }
 
-.button__text{}
+.button--icon {
+  justify-content: center;
+  align-items: center;
+}
+
+.button__text{
+
+}
 
 .button__icon{
   font-size: 1.4rem;
@@ -164,4 +204,12 @@ li.item:hover a{
 .list__item:hover{
   background: var(--husk);
   color: var(--mine-shaft);
+}
+
+div.card > ul.list >li.list__item a:visited{
+  color: var(--mine-shaft);
+}
+
+ul.list > li.list__item:last-child{
+  border-bottom: none;
 }
